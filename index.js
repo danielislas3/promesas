@@ -4,6 +4,15 @@ function prepararDesayuno() {
 
   console.log('Hacer desayuno');
   console.log('Preapara ingredientes');
+  /* Fe de erratas:
+     El methodo then SI puede recibir mas de un callback, donde el segundo puede manejar el caso del fallo de la promesa
+     Ejemplo:
+      promesa.then((value)=> {
+        // cumplimiento
+        }, (reason)=> {
+        // rechazo
+      });
+  */
   comprarJamon().then((response) => {
     console.log(response);
 
@@ -48,9 +57,9 @@ function prepararDesayuno() {
 
 // }
 
+
 // Funcion que regresa una promesa
 
-// funcion que retorna una promesa
 function comprarJamon() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
